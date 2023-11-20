@@ -85,7 +85,7 @@ const UpdateStudent = () => {
       <div className='col-lg-6'>
           <form onSubmit={handleSignupForm}>
 
-              <div   div className="form-group">
+              <div   div className="form-group ">
                   <label for="exampleInputPassword1">Student Id</label>
 
                   <input type="text" className="form-control" id= "StudentId" name='StudentId' disabled placeholder="Enter Satudent Name"
@@ -95,7 +95,7 @@ const UpdateStudent = () => {
                   />
               </div>
               
-              <div className="form-group">
+              <div className="form-group ">
                   <label for="exampleInputPassword1">Student Name</label>
 
                   <input type="text" className="form-control" id= "StudentName" name='StudentName' placeholder="Enter Satudent Name"
@@ -105,7 +105,7 @@ const UpdateStudent = () => {
                   />
               </div>
 
-              <div className="form-group">
+              <div className="form-group ">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" className="form-control" id= "Email" name='Email' placeholder="Enter Email"
                       required ={true}
