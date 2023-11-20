@@ -1,6 +1,15 @@
+using backend.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+
+//#region CORS setting for API
 
 #region CORS setting for API
 

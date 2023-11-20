@@ -1,7 +1,11 @@
-﻿using backend.Models;
+﻿using backend.Database;
+using backend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace backend.Controllers
 {
@@ -9,87 +13,96 @@ namespace backend.Controllers
 	[ApiController]
 	public class StudentsController : ControllerBase
 	{
+		private readonly ApplicationDbContext _context;
+
+		public StudentsController(ApplicationDbContext context)
+		{
+			_context = context;
+		}
+
 		[HttpGet]
 		[Route("get-student-list")]
-		public IActionResult GetStudentsList()
+		public async Task<IActionResult> GetStudentsList()
 		{
-			List<Student> students = new List<Student>();
-			
-			// get student list from database
-				students.Add(new Student { StudentId = 1, StudentName = "Pathum", Email = "pathum@gmail.com" });
-				students.Add(new Student { StudentId = 2, StudentName = "Michelle", Email = "michelle@gmail.com" });
-				students.Add(new Student { StudentId = 3, StudentName = "Sanduni", Email = "sanduni@gmail.com" });
-
-			// Return the list of students as JSON in the response
+			List<Student> students = await _context.Students.ToListAsync();
 			return Ok(students);
 		}
 
 		[HttpPost]
 		[Route("create-student")]
-		public IActionResult CreateStudent(Student student)
+		public async Task<IActionResult> CreateStudent(Student student)
 		{
-
-			if (student == null || String.IsNullOrWhiteSpace(student.StudentName) || String.IsNullOrWhiteSpace(student.Email))
+			if (student == null || string.IsNullOrWhiteSpace(student.StudentName) || string.IsNullOrWhiteSpace(student.Email))
 			{
 				return BadRequest();
 			}
 
-			
+			_context.Students.Add(student);
+			await _context.SaveChangesAsync();
 
-			List<Student> students = new List<Student>();
-			
-				students.Add(new Student { StudentId = 1, StudentName = "Pathum", Email = "pathum@gmail.com" });
-				students.Add(new Student { StudentId = 2, StudentName = "Michelle", Email = "michelle@gmail.com" });
-				students.Add(new Student { StudentId = 3, StudentName = "Sanduni", Email = "sanduni@gmail.com" });
-				students.Add(student);
-
-			
-
-			// Return the list of students as JSON in the response
-			return Ok(students);
+			return Ok(student);
 		}
 
 		[HttpGet]
 		[Route("get-student-by-id/{StudentId}")]
-		public IActionResult GetStudentsById(int StudentId)
+		public async Task<IActionResult> GetStudentsById(int StudentId)
 		{
-			List<Student> students = new List<Student>();
-	
-				students.Add(new Student { StudentId = 1, StudentName = "Pathum", Email = "pathum@gmail.com" });
-				students.Add(new Student { StudentId = 2, StudentName = "Michelle", Email = "michelle@gmail.com" });
-				students.Add(new Student { StudentId = 3, StudentName = "Sanduni", Email = "sanduni@gmail.com" });
+			var student = await _context.Students.FirstOrDefaultAsync(x => x.StudentId == StudentId);
 
-			var student = students.Where(x => x.StudentId == StudentId).FirstOrDefault();
+			if (student == null)
+			{
+				return NotFound();
+			}
 
-			// Return the list of students as JSON in the response
 			return Ok(student);
 		}
 
-		[HttpPost]
+		[HttpPut]
 		[Route("update-student")]
-		public IActionResult UpdateStudent(Student student)
+		public async Task<IActionResult> UpdateStudent(Student student)
 		{
-
-			if (student == null || String.IsNullOrWhiteSpace(student.StudentName) || String.IsNullOrWhiteSpace(student.Email) || student.StudentId < 1)
+			if (student == null || string.IsNullOrWhiteSpace(student.StudentName) || string.IsNullOrWhiteSpace(student.Email) || student.StudentId < 1)
 			{
 				return BadRequest();
 			}
 
+			_context.Entry(student).State = EntityState.Modified;
 
+			try
+			{
+				await _context.SaveChangesAsync();
+			}
+			catch (DbUpdateConcurrencyException)
+			{
+				if (!_context.Students.Any(s => s.StudentId == student.StudentId))
+				{
+					return NotFound();
+				}
+				else
+				{
+					throw;
+				}
+			}
 
-			List<Student> students = new List<Student>();
-
-			students.Add(new Student { StudentId = 1, StudentName = "Pathum", Email = "pathum@gmail.com" });
-			students.Add(new Student { StudentId = 2, StudentName = "Michelle", Email = "michelle@gmail.com" });
-			students.Add(new Student { StudentId = 3, StudentName = "Sanduni", Email = "sanduni@gmail.com" });
-			students.Add(student);
-
-
-
-			// Return the list of students as JSON in the response
-			return Ok(students);
+			return Ok(student);
 		}
 
+		[HttpDelete]
+		[Route("delete-student/{studentId}")]
+		public async Task<IActionResult> DeleteStudent(int studentId)
+		{
+			var student = await _context.Students.FirstOrDefaultAsync(x => x.StudentId == studentId);
+
+			if (student == null)
+			{
+				return NotFound();
+			}
+
+			_context.Students.Remove(student);
+			await _context.SaveChangesAsync();
+
+			return Ok(student);
+		}
 
 	}
 }
