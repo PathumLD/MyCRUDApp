@@ -6,6 +6,8 @@ import Home from '../views/Home';
 import StudentList from '../views/StudentList';
 import CreateStudent from '../views/CreateStudent';
 import UpdateStudent from '../views/UpdateStudent';
+import Login from '../pages/Login';
+import Signup from '../pages/Signup';
 
 const Routing = () => {
   return (
@@ -14,6 +16,8 @@ const Routing = () => {
 
                 <Routes>
                     <Route path="/" default element={<Home />} />
+                    <Route path="/login" element={<Login/>}></Route>
+                    <Route path="/signup" element={<Signup />} />
                     <Route path="/studentlist" element={<StudentList />} />
                     <Route path="/create" element={<CreateStudent />} />
                     <Route path="/update/:studentId" element={<UpdateStudent />} />

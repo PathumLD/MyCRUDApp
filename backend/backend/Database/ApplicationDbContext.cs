@@ -11,5 +11,6 @@ namespace backend.Database
         }
 
 		public DbSet<Student> Students { get; set; }
+		public DbSet<Users> Users { get; set; }
 	}
 }
