@@ -91,7 +91,7 @@ const Signup = () => {
           Submit
         </button>
         <a className="m-4 font text-decoration-none" href="./signup">
-          Signup
+          Login
         </a>
       </form>
     </>
