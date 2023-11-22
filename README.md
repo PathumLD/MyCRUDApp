@@ -1,6 +1,23 @@
 # MyCRUDApp
 I created a simple CRUD app with signup & login using React vite and ASP.Net core web API.
 
+Used Packages
+  * Microsoft.AspNetCore.Identity.EntityFramework Core (6.0.10)
+
+  * Microsoft.AspNetCore.OpenApi (7.0.13)
+
+  * Microsoft.EntityFramework Core (6.0.25)
+
+  * Microsoft.EntityFrameworkCore.Design (6.0.25)
+
+  * Microsoft.EntityFrameworkCore.SqlServer (6.0.25)
+
+  * Microsoft.EntityFramework Core. Tools (6.0.25)
+
+  * Microsoft.VisualStudio.Web.CodeGeneration (7.0.11)
+
+  * Microsoft.VisualStudio.Web.CodeGeneration.Design (7.0.11)
+
 Home Page
 
 ![Screenshot 2023-11-22 132859](https://github.com/PathumLD/MyCRUDApp/assets/89245419/c2d93843-329f-4bc9-b849-f4ed94a2354b)
