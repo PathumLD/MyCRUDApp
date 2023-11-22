@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ri+ZUaLkzxQc75I6VN7UCHHf5FIkgVGcdpp3A+pYvmkziWI1P8VJCbN1l5RhU1IevsMjFSCN8RvS9sLQooI1pQ==",
+  "dgSpecHash": "P48L8979ZsWYxrwFwQIVdbtFrsQaZqysxnvMr0pvXCHDY+G1GVGW9urevttYlLknHVP+7B87wgwW3SvFgadVJQ==",
   "success": true,
   "projectFilePath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp\\backend\\backend\\backend.csproj",
   "expectedPackageFiles": [
@@ -230,8 +230,8 @@
     "C:\\Users\\iamar\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\iamar\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\iamar\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\iamar\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
     "C:\\Users\\iamar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\iamar\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
     "C:\\Users\\iamar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
     "C:\\Users\\iamar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
