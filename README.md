@@ -2,6 +2,7 @@
 I created a simple CRUD app with signup & login using React vite and ASP.Net core web API.
 
 Database - school
+Tables - Students, Users
 
 Used Packages
   * Microsoft.AspNetCore.Identity.EntityFramework Core (6.0.10)
