@@ -20,15 +20,15 @@ const CreateStudent = () => {
             StudentName : StudentName,
             Email : Email
         }
-        debugger
+        
 
         let URL ="https://localhost:7237/api/student/create-student";
         const response = await axios.post(URL, param, {
             headers: headers,
         });
-        debugger
+        
 
-        let dummy2 = "";
+        
 
         if(response!=undefined && response.data.length >0 ) {
             navigate('/studentlist')

@@ -21,6 +21,48 @@ namespace backend.Controllers
 
 
 		[HttpPost]
+		[Route("signup")]
+		public async Task<IActionResult> Signup(Users user)
+		{
+			try
+			{
+				if (user == null || string.IsNullOrWhiteSpace(user.UserName) || string.IsNullOrWhiteSpace(user.UserEmail) || string.IsNullOrWhiteSpace(user.Password))
+				{
+					return BadRequest("Invalid user data");
+				}
+
+				// Check if the user already exists (based on email or any unique identifier)
+				var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.UserEmail == user.UserEmail);
+
+				if (existingUser != null)
+				{
+					return Conflict("User already exists");
+				}
+
+				// Create a new user entity
+				var newUser = new Users
+				{
+					UserName = user.UserName,
+					UserEmail = user.UserEmail,
+					Password = user.Password, // Note: Consider using proper password hashing
+					Phone = user.Phone						 // Add other properties as per your User model
+				};
+
+				// Add the new user to the database
+				_context.Users.Add(newUser);
+				await _context.SaveChangesAsync();
+
+				return CreatedAtAction(nameof(Signup), newUser); // Return the newly created user
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, $"Error creating user: {ex.Message}");
+			}
+		}
+
+
+
+		[HttpPost]
 		[Route("login")]
 		public async Task<IActionResult> Login(Users user)
 		{
