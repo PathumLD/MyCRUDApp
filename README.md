@@ -12,3 +12,7 @@ Login Page
 Signup Page
 
 ![Screenshot 2023-11-22 133135](https://github.com/PathumLD/MyCRUDApp/assets/89245419/60902260-0c85-4ca0-ac80-b0042c12efd9)
+
+Student List
+
+![Screenshot 2023-11-22 133154](https://github.com/PathumLD/MyCRUDApp/assets/89245419/e52dfa3f-e28d-405f-a1cc-828dfc2ae78e)
