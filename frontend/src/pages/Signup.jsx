@@ -90,7 +90,7 @@ const Signup = () => {
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
-        <a className="m-4 font text-decoration-none" href="./signup">
+        <a className="m-4 font text-decoration-none" href="./login">
           Login
         </a>
       </form>
