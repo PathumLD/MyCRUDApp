@@ -20,3 +20,7 @@ Student List
 Add Student Page
 
 ![Screenshot 2023-11-22 133206](https://github.com/PathumLD/MyCRUDApp/assets/89245419/ac1eb188-c815-4f55-be7f-5cff34ff8767)
+
+Edit Student Page
+
+![Screenshot 2023-11-22 133219](https://github.com/PathumLD/MyCRUDApp/assets/89245419/53f52996-229e-4187-9c9f-102fe13ecca3)
