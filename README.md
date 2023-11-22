@@ -24,3 +24,7 @@ Add Student Page
 Edit Student Page
 
 ![Screenshot 2023-11-22 133219](https://github.com/PathumLD/MyCRUDApp/assets/89245419/53f52996-229e-4187-9c9f-102fe13ecca3)
+
+Delete Student Page
+
+![Screenshot 2023-11-22 133233](https://github.com/PathumLD/MyCRUDApp/assets/89245419/816ba553-048e-4f0c-8410-ee51731e6e10)
