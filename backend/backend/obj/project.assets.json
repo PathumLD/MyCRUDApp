@@ -11488,11 +11488,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp\\backend\\backend\\backend.csproj",
+      "projectUniqueName": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp(Working but messed)\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp\\backend\\backend\\backend.csproj",
+      "projectPath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp(Working but messed)\\backend\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\iamar\\.nuget\\packages\\",
-      "outputPath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp\\backend\\backend\\obj\\",
+      "outputPath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp(Working but messed)\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iamar\\AppData\\Roaming\\NuGet\\NuGet.Config",

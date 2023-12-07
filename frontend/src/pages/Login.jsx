@@ -25,7 +25,7 @@ const Login = () => {
         const data = await response.json();
         console.log('User authenticated:', data);
         // Redirect to the studentlist page upon successful login
-        window.location.href = '/studentlist';
+        window.location.href = '/userlist';
       } else if (response.status === 401) {
         console.log('Invalid credentials');
         // Handle invalid credentials

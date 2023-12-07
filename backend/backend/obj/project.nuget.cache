@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P48L8979ZsWYxrwFwQIVdbtFrsQaZqysxnvMr0pvXCHDY+G1GVGW9urevttYlLknHVP+7B87wgwW3SvFgadVJQ==",
+  "dgSpecHash": "XHV8JR2laVs3fDkKaJ8cuZuUzxzgIXUGYNl2dx2CFaczGsiP78GFPI08J/uKZe7hfURRSpzcNniCzTP/g846KQ==",
   "success": true,
-  "projectFilePath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp\\backend\\backend\\backend.csproj",
+  "projectFilePath": "E:\\Developing\\.Net\\FullStack\\MyCRUDApp(Working but messed)\\backend\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iamar\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\iamar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

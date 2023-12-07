@@ -8,6 +8,7 @@ import CreateStudent from '../views/CreateStudent';
 import UpdateStudent from '../views/UpdateStudent';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
+import UsersList from '../views/UsersList';
 
 const Routing = () => {
   return (
@@ -18,6 +19,7 @@ const Routing = () => {
                     <Route path="/" default element={<Home />} />
                     <Route path="/login" element={<Login/>}></Route>
                     <Route path="/signup" element={<Signup />} />
+                    <Route path="/userlist" element={<UsersList />} />
                     <Route path="/studentlist" element={<StudentList />} />
                     <Route path="/create" element={<CreateStudent />} />
                     <Route path="/update/:studentId" element={<UpdateStudent />} />
